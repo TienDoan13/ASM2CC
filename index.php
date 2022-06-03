@@ -116,11 +116,15 @@
 				$result=mysqli_query($connect,$sql);
 					while($row=mysqli_fetch_array($result)){
 				?>
-				<div class="product">
-					<a href="detail.php?id=<?php echo $row['song_id']; ?>" target="_blank"><img src="img/<?php echo $row['song_image'];?>" width="270px" height="270px"></a>
-					<p><?php echo $row['song_name'];?></p>
-					<p style="font-size: 13px"><?php echo $row['song_singername'];?></p>
-				</div>
+				<div class= "row d-inline-flex">
+            <div class ="col-6 col-sm-4 col-md-3 p-2">
+               <div class="card h-100">
+                  <a href="detail.php?id=<?php echo $row['song_id']; ?>" target="_blank"><img src="img/<?php echo $row['song_image'];?>" width="270px" height="270px"></a>
+                    <p><?php echo $row['song_name'];?></p>
+                    <p style="font-size: 13px"><?php echo $row['song_singername'];?></p>
+               </div>
+            </div>
+         </div>
 				<?php
 				}
 				?>
