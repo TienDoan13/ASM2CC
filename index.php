@@ -42,6 +42,15 @@
                 margin-bottom: 5.5rem!important;
             }
         }
+        .product{
+        color: white;
+        float: left;
+        font-family: arial;
+        text-align: center;
+        display: block;
+        margin-left: 20px;
+        margin-top: 5px;
+        }
     </style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -102,7 +111,7 @@
         </div>
     </main>
     <div class="product">
-    	<p style="text-align: left; font-family: arial; color: black; font-size: 30px; text-align: center; margin-top: 50px;">All Songs</p>
+    	<p style="text-align: left; font-family: arial; color: black; font-size: 30px; text-align: center; margin-top: 50px;">All Products</p>
 			<div>
 				<?php
 				$connect = mysqli_connect('3.132.234.157','doubleTToys','doubleT','doublettoysdata');
@@ -112,24 +121,19 @@
 				else{
 					echo"Connection failed";
 				}
-				$sql="SELECT * FROM song";
+				$sql="SELECT * FROM product";
 				$result=mysqli_query($connect,$sql);
 					while($row=mysqli_fetch_array($result)){
 				?>
-				<div class= "row d-inline-flex">
-            <div class ="col-6 col-sm-4 col-md-3 p-2">
-               <div class="card h-100">
-                  <a href="detail.php?id=<?php echo $row['song_id']; ?>" target="_blank"><img src="img/<?php echo $row['song_image'];?>" width="270px" height="270px"></a>
-                    <p><?php echo $row['song_name'];?></p>
-                    <p style="font-size: 13px"><?php echo $row['song_singername'];?></p>
+               <div class="product">
+                    <a>?id=<?php echo $row['product_id']; ?>" target="_blank"><img src="img/<?php echo $row['product_image'];?>" width="270px" height="270px"></a>
+                    <p><?php echo $row['product_name'];?></p>
+                    <p style="font-size: 13px"><?php echo $row['product_price'];?></p>
                </div>
             </div>
-         </div>
 				<?php
 				}
 				?>
-			</div>
-		</div>
     </div>
 
     <footer class="page-footer font-small bg-light">
