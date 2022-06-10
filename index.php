@@ -254,7 +254,7 @@
         <p style="text-align: left; font-family: arial; color: black; font-size: 30px; text-align: center; margin-top: 50px;">All Products</p>
             <div>
                 <?php
-                $connect = mysqli_connect('3.132.234.157','tiendd123','tien123','doublettoysdata');
+                $connect = mysqli_connect('3.132.234.157','tiendd123','tien123','tiendd132001');
                 if($connect){
                     echo "";
                 }
