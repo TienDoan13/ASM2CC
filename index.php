@@ -44,7 +44,7 @@
             }
         }
         .product{
-        color: white;
+        color: black;
         float: left;
         font-family: arial;
         text-align: center;
@@ -254,7 +254,7 @@
         <p style="text-align: left; font-family: arial; color: black; font-size: 30px; text-align: center; margin-top: 50px;">All Products</p>
             <div>
                 <?php
-                $connect = mysqli_connect('3.132.234.157','tiendd123','tien123','doublettoysdata');
+                $connect = mysqli_connect('localhost','root','','doublettoysdata');
                 if($connect){
                     echo "";
                 }
@@ -264,51 +264,21 @@
                 $sql="SELECT * FROM product";
                 $result=mysqli_query($connect,$sql);
                     while($row=mysqli_fetch_array($result)){
+                        $product_id=$row['product_id'];
+                        $product_image=$row['product_image'];
+                        $product_name=$row['product_name'];
+                        $product_price=$row['product_price'];
                 ?>
                <div class="product">
-                    <a>?id=<?php echo $row['product_id']; ?>" target="_blank"><img src="img/<?php echo $row['product_image'];?>" width="270px" height="270px"></a>
-                    <p><?php echo $row['product_name'];?></p>
-                    <p style="font-size: 13px"><?php echo $row['product_price'];?></p>
+                    <img src="img/<?php echo "$product_image" ?>" width="270px" height="270px">
+                    <p><?php echo $row['product_name']?></p>
+                    <p style="font-size: 13px"><?php echo $row['product_price']?></p>
                </div>
             </div>
                 <?php
                 }
                 ?>
     </div>
-    <footer class="page-footer font-small bg-light">
-        <div>
-            <div class="container-fluid">
-                <!-- Grid row-->
-                <div class="row py-4 d-flex align-items-center">
-                    <!-- Grid column -->
-                    <div class="col-md-7 col-lg-5 col-xl-4 text-center text-md-left  mb-md-0 small">
-                        <nav class="nav justify-content-center justify-content-md-start">
-                            <a class="nav-link text-muted" href="#">Terms of Privacy</a>
-                            <a class="nav-link text-muted" href="#">Cookies</a>
-                            <a class="nav-link text-muted" href="#">About</a>
-                            <a class="nav-link text-muted" href="#">Contact</a>
-                        </nav>
-                    </div>
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-6 text-center text-md-left  mb-md-0 small">
-                        <div class="footer-copyright text-center text-black-50 pt-3 pb-2">© 2020
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-3 col-xl-2 text-center text-md-right">
-                        <a href="#" class="text-dark">
-                            <i class="fab fa-facebook-f white-text mx-2"> </i></a>
-                        <a href="#" class="text-dark">
-                            <i class="fab fa-twitter white-text mx-2"> </i></a>
-                        <a href="#" class="text-dark">
-                            <i class="fab fa-instagram white-text mx-2"> </i></a>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row-->
-            </div>
-        </div>
-    </footer>
 </body>
 </head>
 </html>
