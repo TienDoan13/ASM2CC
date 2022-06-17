@@ -49,53 +49,8 @@
         font-family: arial;
         text-align: center;
         display: block;
-        margin-left: 20px;
+        margin-left: 30px;
         margin-top: 5px;
-        }
-        .search {
-        height: 40px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        background: #2f3640;
-        border-radius: 50px;
-        padding: 10px;
-        }
-        .sbutton {
-        color: #e84118;
-        float: right;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: #DADADA;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        transition: 0.4s;
-        }
-        .stext {
-        border: none;
-        background: none;
-        outline: none;
-        float: left;
-        padding: 0;
-        color: #555;
-        font-size: 15px;
-        transition: 0.4s;
-        line-height: 40px;
-        width: 0px;
-        }
-        .sbox:hover > .stext {
-        width: 200px;
-        padding: 0 5px;
-        border-radius: 50px;
-        }
-        .sbox:hover > .sbutton {
-        background: #fff;
-        }
-        .fa-search {
-        color: #001EFF;
         }
     </style>
 <body>
@@ -239,14 +194,6 @@
             <div class="col col-sm-7 text-center text-xl-left col-xl-4 offset-xl-2">
                 <h1 class="mb-4">Want some toys for your kids, gifts for your friend's child, or whatever. Let's buy it in our store.</h1>
                 <p class="mb-5 subtitle-mb">Games & puzzles, lego, baby & toddlers... We have it all.</p>
-                <div class="box">
-                    <form class="sbox" action="/search" method="get">
-                        <input class="stext" type="text" name="q" placeholder="Tìm kiếm bài viết...">
-                        <a class="sbutton" type="submit" href="javascript:void(0);">
-                        <i class="fa fa-search"></i>
-                        </a>
-                    </form>
-                </div>
             </div>
         </div>
     </main>
