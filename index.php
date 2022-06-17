@@ -49,7 +49,7 @@
         font-family: arial;
         text-align: center;
         display: block;
-        margin-left: 30px;
+        margin-left: 115px;
         margin-top: 5px;
         }
     </style>
@@ -217,8 +217,8 @@
                         $product_price=$row['product_price'];
                 ?>
                <div class="product">
-                    <img src="img/<?php echo "$product_image" ?>" width="270px" height="270px">
-                    <p><?php echo $row['product_name']?></p>
+                    <img src="img/<?php echo "$product_image" ?>" width="350px" height="350px">
+                    <p style="font-size: 15px"><?php echo $row['product_name']?></p>
                     <p style="font-size: 13px"><?php echo $row['product_price']?></p>
                </div>
             </div>
